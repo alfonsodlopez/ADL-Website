@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `The Noise and Signals`,
+    author: `Alfonso Lopez`,
+    description: `Musings and apps for my own curiousity.`,
+    siteUrl: `https://github.com/alfonsodlopez`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `alfonsodlopez`,
     },
   },
   plugins: [
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-137482515-1`,
       },
     },
     `gatsby-plugin-feed`,
@@ -63,7 +63,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/adl-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
