@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `The Noise and Signals`,
+    title: `Signals and Noise`,
     author: `Alfonso Lopez`,
     description: `Musings and apps for my own curiousity.`,
     siteUrl: `https://github.com/alfonsodlopez`,
