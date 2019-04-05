@@ -2,10 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Signals and Noise`,
     author: `Alfonso Lopez`,
-    description: `Musings and apps for my own curiousity.`,
+    description: `Musings and apps for my own curiosity.`,
     siteUrl: `https://github.com/alfonsodlopez`,
     social: {
       twitter: `alfonsodlopez`,
+      github: `alfonsodlopez`
     },
   },
   plugins: [
