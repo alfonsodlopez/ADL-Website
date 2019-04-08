@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import NavBar from "../components/navbar";
+import Navbar from "../components/navbar";
 
 class NotFoundPage extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class NotFoundPage extends React.Component {
 
     return (
       <div>
-        <NavBar/>
+        <Navbar/>
         <Layout location={this.props.location} title={siteTitle}>
           <SEO title="404: Not Found" />
           <h1>Not Found</h1>
