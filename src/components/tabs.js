@@ -1,50 +1,52 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Create from '@material-ui/icons/Create';
-import Work from '@material-ui/icons/Work';
-import Face from '@material-ui/icons/Face';
+import { Link } from "gatsby"
+import { makeStyles } from '@material-ui/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
 
-const styles = {
-  root: {
-    flexGrow: 1,
+const useStyles = makeStyles({
+  toolbarSecondary: {
+    backgroundColor: '#2196f3',
+    borderColor: 'none',
+    justifyContent: 'center',
+    overflowX: 'auto',
   },
-};
+  activeStyle: {
+    fontWeight: 'bold',
+    color: 'gray',
+    background: '#7bb7eb',
+  },
+});
 
-class IconLabelTabs extends React.Component {
-  state = {
-    value: 0,
-  };
+export default function IconLabelTabs() {
 
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
+  const sections = [
+    ['Blog', '/'],
+    ['Portfolio', 'portfolio'],
+    ['About Me', 'about'],
+  ];
 
-  render() {
-    const { classes } = this.props;
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
 
-    return (
-      <div square className={classes.root}>
-        <Tabs
-          value={this.state.value}
-          onChange={this.handleChange}
-          indicatorColor="secondary"
-          textColor="secondary"
-          centered
+  //TODO: Add Navigate function to console internal navigation instead of <LINK>
+
+
+  return (
+    <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
+      {sections.map(section => (
+        <Link
+          color="inherit"
+          key={section[0]}
+          to={section[1]}
+          className={classes.toolbarLink}
+          activeClassName={classes.activeStyle}
+          style={{ textDecoration: 'none', height: '100%' }}
         >
-          <Tab icon={<Create />} label="Blog" />
-          <Tab icon={<Work />} label="Portfolio" />
-          <Tab icon={<Face />} label="About Me" />
-        </Tabs>
-      </div>
-    );
-  }
+          <Button variant="flat" component="span" style={{ padding: '0 10px', margin: '0 30px', height: '100%' }}>{section[0]}</Button>
+        </Link>
+      ))
+      }
+    </Toolbar >
+  );
 }
-
-IconLabelTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(IconLabelTabs);

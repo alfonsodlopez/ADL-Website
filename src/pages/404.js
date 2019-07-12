@@ -11,11 +11,11 @@ class NotFoundPage extends React.Component {
 
     return (
       <div>
-        <Navbar/>
+        <Navbar />
         <Layout location={this.props.location} title={siteTitle}>
           <SEO title="404: Not Found" />
           <h1>Not Found</h1>
-          <img src="http://img.youtube.com/vi/Xw1C5T-fH2Y/maxresdefault.jpg" alt="This pug feels so bad for you"/>
+          <img src="http://img.youtube.com/vi/Xw1C5T-fH2Y/maxresdefault.jpg" alt="This pug feels so bad for you" />
           <p>You just hit a page that doesn&#39;t exist... the sadness.</p>
         </Layout>
       </div>
