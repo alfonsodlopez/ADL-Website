@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -8,7 +7,6 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
-
     if (location.pathname === rootPath) {
       header = (
         <h1
@@ -23,6 +21,7 @@ class Layout extends React.Component {
               boxShadow: `none`,
               textDecoration: `none`,
               color: `inherit`,
+              color: `#034748`,
             }}
             to={`/`}
           >
@@ -42,7 +41,6 @@ class Layout extends React.Component {
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
             }}
             to={`/`}
           >
@@ -64,7 +62,7 @@ class Layout extends React.Component {
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, By Alfonso Lopez
-        </footer>
+          </footer>
       </div>
     )
   }

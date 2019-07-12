@@ -34,7 +34,7 @@ function Bio() {
 
               He is a freelance full-stack developer, whiskey snob, nerd, and small animal enthusiast.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
+              <a style={{ color: `#034748`, }} href={`https://twitter.com/${social.twitter}`}>
                 You should follow him on Twitter
               </a>
             </p>

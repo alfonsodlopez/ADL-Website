@@ -1,5 +1,5 @@
 ---
-title: My favoite podcasts
+title: My favorite podcasts
 date: "2019-04-04T22:40:32.169Z"
 description: "Alfonso's favorite podcasts."
 ---
