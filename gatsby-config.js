@@ -92,5 +92,11 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'alfonsodlopez.com'
+      },
+    },
   ],
 }

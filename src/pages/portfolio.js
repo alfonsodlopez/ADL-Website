@@ -1,7 +1,4 @@
 import React from "react";
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
-import orange from '@material-ui/core/colors/orange';
 import SEO from "../components/seo";
 import Navbar from '../components/Navbar';
 import Layout from "../components/layout";
