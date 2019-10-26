@@ -61,21 +61,23 @@ In the following sections, I attempt to succiently note the findings presented f
 
 ## What triggers sleep?
 
+### Sleep Pressure
 * Sleep pressure: This is the term used to describe the need to sleep.
 * Sleep pressure is built up through the accumulation of adenosine. It starts accumulating in the body starting from the moment you wake up.
     * It's a molecule that binds readily to phosphate, and is mostly known for its derivitive, ATP (Adenosine triphosphate), which is used to power most living processes in the body. Important stuff.
-* Adenosine bind to receptors in the brain that builds sleep pressure and supresses arousal. The more it accumulates, the stronger the desire to sleep. 
-    * Caffeine works by binding these receptors, and blocks adenosine's ability to 
-* Around 16 hours of being awake, the average person will have built up enough sleep pressure that they will fall asleep easily and stay asleep throughout the night.
+    * Adenosine bind to receptors in the brain that builds sleep pressure and supresses arousal. The more it accumulates, the stronger the desire to sleep. 
+        * Caffeine works by binding these receptors, and blocks adenosine's ability to 
+    * Around 16 hours of being awake, the average person will have built up enough sleep pressure that they will fall asleep easily and stay asleep throughout the night.
     * Try to deny sleep and you will eventually get to a point where you're so exhausted that the body's desire to sleep will take over and you will go night-night. 
-* As you sleep adenosine is removed. Ideally, it will occur during a quite period in your circadian rythm, so you can get uninterrupted deep sleep.
+    * As you sleep adenosine is removed. Ideally, it will occur during a quite period in your circadian rythm, so you can get uninterrupted deep sleep.
 
 ### Circadian Rhythms
 * Circadian rhythms
     *  You have a build in clock called the super chiasmatic necleus (SCN). It is located in the hypothalamus.
-        * Even with the master clock sitting in the SCN, every cell in the body has a 24 hour clock of its own.
-        * Starting in the evening the SCN will stimulate the body to produce melatonin. The presence of melatonin tells the body it's time to shut down.
-        * In the morning the 
+        * Sidenote: Even with the master clock sitting in the SCN, every cell in the body has a 24 hour clock of its own performing their own functions.
+        * Starting in the evening, the SCN will stimulate the pineal gland to produce melatonin. The presence of melatonin tells the body it's time to shut down.
+        * In the morning, sunlight coming through our eyes triggers the SCN to send a message to the pineal gland to turn off melatonin production. 
+        * Duriing the day there is virtually no melatonin in the body.
     * Chronotype is a person's propensity to sleep at certain times of the day.
         * **Chronotype is genetically determined.** It is behavior that arises from circadian rhythms based on physical processes. It is not a choice.
         * It can be pulled around 30-45 minutes, but not much more than that.
@@ -84,6 +86,8 @@ In the following sections, I attempt to succiently note the findings presented f
             * 40% Neither strongly morning or night
             * 30% of people are night owls
             * Sidenote: Many owls will try to go to bed early, but then they stay awake and often think they have insomnia. This used to happen to me a lot in college.
+
+Under normal circumstances, the sleep pressure build throughout the day along with the melatonin build up from the circadian rhythm peak in the late evening signaling time to sleep. 
 
 ## Learning and Memory
 
@@ -191,7 +195,7 @@ In the closing section of *Why We Sleep*, Walker lays out 12 guidelines to follo
     * Ambien induced sleep decreases connections formed from learning during the day up to 50%, done in rats for neuroplasticity.
 
 ## Miscellaneous Tidbits
-* Don't wear shades in the morning. Let natural light hit your eyes in the morning without shades on. Humans have a retinal mechanism that goes from the thalamus into hypothalamus that regulates your circadium rythm. Use shades in the afternoon to encourage the production of melatonin.
+* Don't wear shades in the morning. Let natural light hit your eyes in the morning without shades on. Humans have a retinal mechanism (see the circadian rhythm section) that goes from the thalamus into hypothalamus that regulates your circadium rythm. Use shades in the afternoon to encourage the production of melatonin.
 
 # Sources
 1. Walker, Matthew P. Why We Sleep: Unlocking the Power of Sleep and Dreams. Scribner, an Imprint of Simon & Schuster, Inc., 2017.
