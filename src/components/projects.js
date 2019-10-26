@@ -1,8 +1,13 @@
-import * as React from 'react'
-import { StaticQuery, graphql } from "gatsby"
+import * as React from 'react';
+import { StaticQuery, graphql } from "gatsby";
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import H2 from '../styles/H2';
+import Content from '../styles/Content.js';
+import { CardContent, CardHeader, CardActions } from '@material-ui/core';
 
 function Projects() {
   return (
@@ -11,7 +16,7 @@ function Projects() {
 			{
 				github {
 					repositoryOwner(login: "alfonsodlopez") {
-              repositories(first: 8, orderBy: {field: STARGAZERS, direction: DESC}) {
+              repositories(first: 6, orderBy: {field: STARGAZERS, direction: DESC}) {
                 edges {
                   node {
                     id
@@ -33,29 +38,45 @@ function Projects() {
         },
       }) => (
           <Container maxWidth="md" id="projects">
-            <h2>Projects</h2>
-            <Grid>
+            <H2>My Projects</H2>
+            <Grid
+              container
+              spacing={2}
+              direction="row"
+              alignItems="stretch"
+            >
               {edges.map(({ node }) => (
-                <div
-                  key={node.id}
-                  as="a"
-                  href={node.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Grid item xs={6}>
                   <Card>
-                    <div>
-                      <h4>{node.name}</h4>
-                      <p>{node.description}</p>
-                    </div>
+                    <Content>
+                      <CardHeader
+                        title={node.name}
+                      />
+                      <CardContent>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                          {node.description}
+                        </Typography>
+                      </CardContent>
+                      <CardActions>
+                        <Button size="small">
+                          <a
+                            key={node.id}
+                            href={node.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >Repository
+                          </a>
+                        </Button>
+                      </CardActions>
+                    </Content>
                   </Card>
-                </div>
+                </Grid>
               ))}
             </Grid>
-          </Container>
+          </ Container>
         )}
     />
   )
 }
 
-export default Projects
+export default Projects 
