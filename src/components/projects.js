@@ -23,6 +23,7 @@ function Projects() {
                     name
                     url
                     description
+                    viewerHasStarred
                   }
                 }
               }
@@ -46,32 +47,34 @@ function Projects() {
               alignItems="stretch"
             >
               {edges.map(({ node }) => (
-                <Grid item xs={12}>
-                  <Card>
-                    <Content>
-                      <CardHeader
-                        title={node.name}
-                      />
-                      <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                          {node.description}
-                        </Typography>
-                      </CardContent>
-                      <CardActions>
-                        <Button size="small">
-                          <a
-                            key={node.id}
-                            href={node.url}
-                            as="a"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >Repository
-                          </a>
-                        </Button>
-                      </CardActions>
-                    </Content>
-                  </Card>
-                </Grid>
+                (node.viewerHasStarred === true) ?
+                  <Grid item xs={12}>
+                    <Card>
+                      <Content>
+                        <CardHeader
+                          title={node.name}
+                        />
+                        <CardContent>
+                          <Typography variant="body2" color="textSecondary" component="p">
+                            {node.description}
+                          </Typography>
+                        </CardContent>
+                        <CardActions>
+                          <Button size="small">
+                            <a
+                              key={node.id}
+                              href={node.url}
+                              as="a"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >Repository
+                  </a>
+                          </Button>
+                        </CardActions>
+                      </Content>
+                    </Card>
+                  </Grid>
+                  : null
               ))}
             </Grid>
           </ Container>
