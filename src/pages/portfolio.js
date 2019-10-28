@@ -6,27 +6,6 @@ import Projects from "../components/projects";
 
 export default class Portfolio extends React.Component {
     render() {
-        /*         const theme = createMuiTheme({
-                    palette: {
-                        primary: blue,
-                        secondary: orange,
-                    },
-                    status: {
-                        danger: 'red',
-                    },
-                        return (
-                            <MuiThemeProvider theme={theme}>
-                                <Navbar />
-                
-                                <Layout location={this.props.location}>
-                                    <SEO
-                                        title="All posts"
-                                        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-                                    />
-                                    <Projects />
-                                </Layout>
-                            </MuiThemeProvider>
-                }); */
         return (
             <div>
                 <Navbar />

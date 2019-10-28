@@ -42,11 +42,11 @@ function Projects() {
             <Grid
               container
               spacing={2}
-              direction="row"
+              direction="column"
               alignItems="stretch"
             >
               {edges.map(({ node }) => (
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                   <Card>
                     <Content>
                       <CardHeader
@@ -62,6 +62,7 @@ function Projects() {
                           <a
                             key={node.id}
                             href={node.url}
+                            as="a"
                             target="_blank"
                             rel="noopener noreferrer"
                           >Repository

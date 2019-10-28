@@ -5,6 +5,8 @@ import orange from '@material-ui/core/colors/orange';
 import SEO from "../components/seo"
 import Navbar from '../components/Navbar';
 import Layout from "../components/layout";
+import SkillList from "../components/SkillList";
+
 
 export default class About extends React.Component {
 
@@ -24,7 +26,6 @@ export default class About extends React.Component {
         });
         //TODO: Set the div style in CSS file
         //TODO: Set images and "contact me" div on the right panel 
-        //TODO: Move skills to section as component
         return (
             <MuiThemeProvider theme={theme}>
                 <Navbar />
@@ -37,25 +38,10 @@ export default class About extends React.Component {
                     <div>
                         <div style={{ marginTop: style.top }}>Thanks for coming to my site. I'm Alfonso Lopez, an enthusiastic nerd that's curious about virtually anything, except reality TV shows.</div>
 
-                        <div style={{ marginTop: style.top }}>My career has largely been in some combination of technical account management, project management, and sales. My passions largely lie in the evolving technical landscape and generating the most value for my clients by advising them how best they can devote their resouces from a project management point of view.</div>
+                        <div style={{ marginTop: style.top }}>My career is a combination of technical account management, project management, and programming. My passions largely lie in the evolving technical landscape and generating the most value for my clients.</div>
 
                         <div style={{ marginTop: style.top }}>I'm a full-stack web developer with a bit of a passing interest in React and machine learning and divide my time between those two areas of development. In short, I am experienced with the following technologies:
-                        <ul>
-                                <li>Python</li>
-                                <li>TensorFlow</li>
-                                <li>Pandas</li>
-                                <li>JavaScript</li>
-                                <li>jQuery</li>
-                                <li>Node.js</li>
-                                <li>Handlebars.js</li>
-                                <li>React.js</li>
-                                <li>SQL/MySQL</li>
-                                <li>MongoDB</li>
-                                <li>Firebase</li>
-                                <li>AWS</li>
-                                <li>Heroku</li>
-                                <li>And plenty of other popular technologies/libraries under JS and Python I haven't mentioned</li>
-                            </ul>
+                        <SkillList />
                         </div>
 
                         <div style={{ marginTop: style.top }}>
