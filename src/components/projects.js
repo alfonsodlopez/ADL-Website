@@ -1,15 +1,43 @@
 import * as React from 'react';
 import { StaticQuery, graphql } from "gatsby";
+import { makeStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import H2 from '../styles/H2';
-import Content from '../styles/Content.js';
-import { CardContent, CardHeader, CardActions } from '@material-ui/core';
+import { Card, CardContent, CardHeader, CardActions, CardMedia, CardActionArea } from '@material-ui/core';
+import cx from 'clsx';
+
+import TextInfoCardContent from '@mui-treasury/components/cardContent/textInfo';
+import { useFourThreeCardMediaStyles } from '@mui-treasury/styles/cardMedia/fourThree';
+import { useText04CardContentStyles } from '@mui-treasury/styles/cardContent/text04';
+import { useOverShadowStyles } from '@mui-treasury/styles/shadow/over';
+
+
+
 
 function Projects() {
+
+  const useStyles = makeStyles(() => ({
+    root: {
+      maxWidth: 343,
+      margin: '16',
+      borderRadius: 12,
+      padding: 12,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between"
+    },
+    media: {
+      borderRadius: 6,
+    },
+  }));
+
+  const styles = useStyles();
+  const mediaStyles = useFourThreeCardMediaStyles();
+  const textCardContentStyles = useText04CardContentStyles();
+  const shadowStyles = useOverShadowStyles({ inactive: true });
   return (
     <StaticQuery
       query={graphql`
@@ -21,6 +49,7 @@ function Projects() {
                   node {
                     id
                     name
+                    openGraphImageUrl
                     url
                     description
                     viewerHasStarred
@@ -37,48 +66,74 @@ function Projects() {
             repositories: { edges },
           },
         },
-      }) => (
-          <Container maxWidth="md" id="projects">
-            <H2>My Projects</H2>
-            <Grid
-              container
-              spacing={2}
-              direction="column"
-              alignItems="stretch"
-            >
-              {edges.map(({ node }) => (
-                (node.viewerHasStarred === true) ?
-                  <Grid item xs={12}>
-                    <Card>
-                      <Content>
-                        <CardHeader
-                          title={node.name}
-                        />
-                        <CardContent>
-                          <Typography variant="body2" color="textSecondary" component="p">
-                            {node.description}
-                          </Typography>
-                        </CardContent>
-                        <CardActions>
-                          <Button size="small">
-                            <a
-                              key={node.id}
-                              href={node.url}
-                              as="a"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >Repository
-                  </a>
-                          </Button>
-                        </CardActions>
-                      </Content>
-                    </Card>
-                  </Grid>
-                  : null
-              ))}
-            </Grid>
-          </ Container>
-        )}
+      }) => {
+        return (<Container
+          maxWidth="xl"
+          id="projects"
+        >
+          <H2>My Projects</H2>
+          <Grid
+            container
+            direction="row"
+            justify="space-evenly"
+            alignItems="stretch"
+            spacing={6}
+          >
+            {edges.map(({ node }) => ((node.viewerHasStarred === true) ?
+              <Grid
+                item
+                key={node.id}
+                xs={6}
+                style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}
+              >
+                <Card
+                  className={cx(styles.root, shadowStyles.root)}
+                  style={{
+                    textAlign: 'center',
+                    display: 'block',
+                    width: '30vw',
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <CardMedia
+                    className={cx(styles.media, mediaStyles.root)}
+                    image={node.openGraphImageUrl}
+                  />
+                  <CardContent className={styles.content}>
+                    <CardHeader title={node.name} />
+                    <TextInfoCardContent
+                      classes={textCardContentStyles}
+                      overline={node.title}
+                      heading={node.title}
+                      body={
+                        node.description
+                      }
+                    />
+                  </CardContent>
+                  <CardActionArea>
+                    <CardActions style={{ justifyContent: 'center' }}>
+                      <Button
+                        size="small"
+                        variant="outlined"
+                      >
+                        <a
+                          key={node.id}
+                          href={node.url}
+                          as="a"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {node.name}
+                        </a>
+                      </Button>
+                    </CardActions>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              : null))}
+          </Grid>
+        </Container>);
+      }}
     />
   )
 }

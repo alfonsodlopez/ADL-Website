@@ -31,7 +31,7 @@ export default class About extends React.Component {
                 <Navbar />
                 <Layout location={this.props.location}>
                     <SEO
-                        title="All posts"
+                        title="All Posts"
                         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
                     />
                     <h1 style={{ display: 'flex', justifyContent: 'center' }}>This Guy...</h1>

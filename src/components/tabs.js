@@ -27,7 +27,6 @@ export default function IconLabelTabs() {
   ];
 
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
 
   //TODO: Add Navigate function to console internal navigation instead of <LINK>
 
@@ -43,7 +42,7 @@ export default function IconLabelTabs() {
           activeClassName={classes.activeStyle}
           style={{ textDecoration: 'none', height: '100%' }}
         >
-          <Button variant="flat" component="span" style={{ padding: '0 10px', margin: '0 30px', height: '100%' }}>{section[0]}</Button>
+          <Button variant="text" component="span" style={{ padding: '0 10px', margin: '0 30px', height: '100%' }}>{section[0]}</Button>
         </Link>
       ))
       }
