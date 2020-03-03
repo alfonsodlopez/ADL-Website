@@ -93,6 +93,7 @@ function Projects() {
                     display: 'block',
                     width: '30vw',
                     justifyContent: "space-between",
+                    height: '100%'
                   }}
                 >
                   <CardMedia
