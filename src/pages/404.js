@@ -14,8 +14,7 @@ class NotFoundPage extends React.Component {
         <Navbar />
         <Layout location={this.props.location} title={siteTitle}>
           <SEO title="404: Not Found" />
-          <h1>Not Found</h1>
-          <img src="http://img.youtube.com/vi/Xw1C5T-fH2Y/maxresdefault.jpg" alt="This pug feels so bad for you" />
+          <h1>Page Not Found</h1>
           <p>You just hit a page that doesn&#39;t exist... the sadness.</p>
         </Layout>
       </div>

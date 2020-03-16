@@ -6,6 +6,7 @@ import IconLabelTabs from './tabs';
 const styles = {
   root: {
     flexGrow: 1,
+    width: '100%'
   },
   grow: {
     flexGrow: 1,
