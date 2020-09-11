@@ -40,7 +40,7 @@ export default class About extends React.Component {
 
                         <div style={{ marginTop: style.top }}>My career is a combination of technical account management, project management, and programming. My passions largely lie in the evolving technical landscape and generating the most value for my clients.</div>
 
-                        <div style={{ marginTop: style.top }}>I'm a full-stack web developer with a bit of a passing interest in React and machine learning and divide my time between those two areas of development. In short, I am experienced with the following technologies:
+                        <div style={{ marginTop: style.top }}>I'm a full-stack web developer with a bit of a passing interest in React and machine learning. My time is divided between those two areas of development. In short, I am experienced with the following technologies:
                         <SkillList />
                         </div>
 

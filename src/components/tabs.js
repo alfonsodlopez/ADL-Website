@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 export default function IconLabelTabs() {
 
   const sections = [
-    ['Blog', '/'],
+    ['Blog', ''],
     ['Portfolio', 'portfolio'],
     ['About Me', 'about'],
   ];
@@ -37,7 +37,7 @@ export default function IconLabelTabs() {
         <Link
           color="inherit"
           key={section[0]}
-          to={section[1]}
+          to={`/${section[1]}`}
           className={classes.toolbarLink}
           activeClassName={classes.activeStyle}
           style={{ textDecoration: 'none', height: '100%' }}

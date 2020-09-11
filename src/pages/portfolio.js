@@ -9,7 +9,6 @@ export default class Portfolio extends React.Component {
         return (
             <div>
                 <Navbar />
-
                 <Layout location={this.props.location}>
                     <SEO
                         title="All posts"
