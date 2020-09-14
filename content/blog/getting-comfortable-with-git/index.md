@@ -107,4 +107,6 @@ Indeed, my work is now on my remote repository for myself and others to use. If 
 
 ![Git Clone Local](git_clone_2.jpg)
 
-Just like that, I was able to simply pull the entire repository back into my local machine. You only need to do this if you need to start a pull an entire project and get it set-up on your local machine. The great thing about Git and GitHub's open-source nature is that you can start searching projects you are interested in and clone your own copy to start working on. For your average day-to-day work, all you will want is the most recent changes to a remote repository. This can be done with `git pull`
+Just like that, I was able to simply pull the entire repository back into my local machine. You only need to do this if you need to start a pull an entire project and get it set-up on your local machine. The great thing about Git and GitHub's open-source nature is that you can start searching projects you are interested in and clone your own copy to start working on. For your average day-to-day work, all you will want is the most recent changes to a remote repository. This can be done with `git pull`.
+
+I hope you found this article helpful to understand more about Git and how to get started with your own repository on GitHub.
